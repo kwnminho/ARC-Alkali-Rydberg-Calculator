@@ -945,7 +945,7 @@ class LevelPlot:
                 l = l+1
             nFrom = nFrom+1
         for state in self.atom.extraLevels:
-            if state[1]<=lTo and state[0]>=nFrom:
+            if state[1]<=lTo and state[0]>=self.nFrom-1:
                 self.listX.append(state[1])
                 self.listY.append(self.atom.getEnergy(state[0],state[1],state[2]))
                 self.levelLabel.append(state)
